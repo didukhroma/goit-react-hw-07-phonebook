@@ -1,6 +1,6 @@
-import  { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
-import {searchName} from '../../utils/searchName';
+import { searchName } from '../../utils/searchName';
 import Button from '../Button';
 import Input from '../Input';
 import styles from './ContactForm.module.css';
@@ -30,7 +30,6 @@ class ContactForm extends Component {
       alert(`${name} is already in contacts.`);
       return;
     }
-
     addContact(name, number);
   };
 

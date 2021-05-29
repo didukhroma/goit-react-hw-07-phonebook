@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import ContactListItem from '../ContactListItem/ContactListItem';
-import { filteredData } from '../../utils/filter';
 
-const ContactList = ({ contacts=[], filter='' }) => {
-  const filteredContacts = filteredData(contacts, filter);
+const ContactList = ({ contacts = [] }) => {
   return (
     <ul>
-      {filteredContacts.map(contact => (
+      {contacts.map(contact => (
         <ContactListItem key={contact.id} contact={contact} />
       ))}
     </ul>
@@ -15,7 +13,6 @@ const ContactList = ({ contacts=[], filter='' }) => {
 
 ContactList.propTypes = {
   contacts: PropTypes.array,
-  filter: PropTypes.string,
 };
 
 export default ContactList;

@@ -48,16 +48,4 @@ export const deleteContact = contactId => async dispatch => {
   } catch (error) {
     dispatch(deleteContactError(error));
   }
-
-  //   axios
-  //     .delete(`/todos/${todoId}`)
-  //     .then(() => dispatch(deleteContactSuccess(todoId)))
-  //     .catch(error => dispatch(deleteContactError(error)));
 };
-
-// export default {
-//   fetchTodos,
-//   addTodo,
-//   deleteTodo,
-//   toggleCompleted,
-// };

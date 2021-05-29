@@ -1,4 +1,4 @@
-import {capitalize} from '../../utils/capitalize';
+import { capitalize } from '../../utils/capitalize';
 import styles from './Input.module.css';
 import PropTypes from 'prop-types';
 

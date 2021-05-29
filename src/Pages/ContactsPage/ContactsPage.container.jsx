@@ -1,12 +1,17 @@
 import { connect } from 'react-redux';
 import ContactsPage from './ContactsPage';
 import { fetchContacts } from '../../redux/contacts/contacts-operations';
+import {
+  getAllContacts,
+  getLoading,
+} from '../../redux/contacts/contacts-selectors';
 
-const mapStateToProps = (state) => ({
-    contacts: state.contacts.items,
-})
+const mapStateToProps = state => ({
+  contacts: getAllContacts(state),
+  loading: getLoading(state),
+});
 const mapDispatchToProps = dispatch => ({
-    fetchAllContacts: ()=>dispatch(fetchContacts())
-})
+  fetchAllContacts: () => dispatch(fetchContacts()),
+});
 
-export default connect(mapStateToProps,mapDispatchToProps)(ContactsPage)
+export default connect(mapStateToProps, mapDispatchToProps)(ContactsPage);
